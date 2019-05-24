@@ -1,0 +1,87 @@
+﻿
+@model VjezbanjeRazno.Models.SeminarStudentViewModel
+@{
+    ViewBag.Title = "IspisStudenata";
+  
+}
+
+<h2>IspisStudenata</h2>
+
+<html>
+
+<head>
+    <style>
+        table{
+            border-collapse:collapse;
+
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 15px;
+        }
+        tr:hover {
+            background-color: #ff0000;
+        }
+     
+     
+        
+
+    </style>
+   
+    
+</head>
+
+
+
+<body>
+    <div style="overflow-x:auto">
+
+        <table style="float: left">
+            <tr>
+                <td>Ime</td>
+                <td>Prezime</td>
+                <td>Upisani seminar</td>
+
+
+            </tr>        
+
+            @foreach (var m in Model.Student)
+            {
+                <tr>
+
+                    <td>@m.Ime</td>
+                    <td>@m.Prezime</td>
+                    <td>@m.SeminarId</td>
+
+                </tr>
+
+            }
+
+
+        </table>
+        <table style="float:left">
+            <td>Naziv</td>
+            @foreach (var n in Model.Seminar)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => n.Naziv)
+                    </td>
+
+
+                </tr>
+
+            }
+            
+        </table>
+
+    </div>
+   
+   
+
+ 
+</body>
+
+</html>
