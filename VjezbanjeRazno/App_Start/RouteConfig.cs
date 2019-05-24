@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace VjezbanjeRazno
+namespace MasterDetails
 {
     public class RouteConfig
     {
@@ -16,7 +16,7 @@ namespace VjezbanjeRazno
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Upisi", action = "IspisStudenata", id = UrlParameter.Optional }
+                defaults: new { controller = "Students", action = "ListOfStudentsWithSeminars", id = UrlParameter.Optional }
             );
         }
     }

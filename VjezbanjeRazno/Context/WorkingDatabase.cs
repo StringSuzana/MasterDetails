@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-using VjezbanjeRazno.Models;
+using MasterDetails.Models;
 
-namespace VjezbanjeRazno.Context
+namespace MasterDetails.Context
 {
-    public class BazaPodataka: DbContext
+    public class WorkingDatabase : DbContext
     {
-        public BazaPodataka()
+        public WorkingDatabase()
             :base("VjezbaViewModela")
         {
 

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using VjezbanjeRazno.DAL;
-using VjezbanjeRazno.Models;
+using MasterDetails.DAL;
+using MasterDetails.Models;
 
-namespace VjezbanjeRazno.Controllers
+namespace MasterDetails.Controllers
 {
-    public class UpisiController : Controller
+    public class StudentsController : Controller
     {
-        SveRepo repo = new SveRepo();
+        SeminarStudentRepo repo = new SeminarStudentRepo();
         // GET: Upisi
-        public ActionResult IspisStudenata()
+        public ActionResult ListOfStudentsWithSeminars()
         {  
 
-        List<Student> listaStudenata = repo.ListaSvihStudenata();
+        List<Student> listaStudenata = repo.ListOfAllStudents();
             List<Seminar> listaSeminara= new List<Seminar>();
 
             List<int> listaBrojeva = new List<int>();
@@ -25,7 +25,7 @@ namespace VjezbanjeRazno.Controllers
             }
             foreach(var x in listaBrojeva)
             {
-                var seminar = repo.ListaSvihSeminara().FirstOrDefault(m => m.SeminarId == x);
+                var seminar = repo.ListOfAllSeminars().FirstOrDefault(m => m.SeminarId == x);
                 listaSeminara.Add(seminar);
             }            
             SeminarStudentViewModel viewModelList = new SeminarStudentViewModel

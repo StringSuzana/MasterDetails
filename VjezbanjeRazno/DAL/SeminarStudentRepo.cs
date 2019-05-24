@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using VjezbanjeRazno.Context;
-using VjezbanjeRazno.Models;
+using MasterDetails.Context;
+using MasterDetails.Models;
 
-namespace VjezbanjeRazno.DAL
+namespace MasterDetails.DAL
 {
-    public class SveRepo
+    public class SeminarStudentRepo
     {
         //BazaPodataka baza = new BazaPodataka();
 
-        public List<Seminar> ListaSvihSeminara()
+        public List<Seminar> ListOfAllSeminars()
         {
-            using (var db = new BazaPodataka())
+            using (var db = new WorkingDatabase())
             {
                 return db.Seminar.ToList();
 
@@ -22,10 +22,10 @@ namespace VjezbanjeRazno.DAL
 
         public void UnesiNoviSeminar(Seminar model)
         {
-            using (var db = new BazaPodataka())
+            using (var db = new WorkingDatabase())
             {
                 //nema validacija podataka za upis radi jednostavnosti vjezbe
-                if(model.Naziv!= null)
+                if(model.SeminarName!= null)
                 {
                     db.Seminar.Add(model);
                     db.SaveChanges();
@@ -34,9 +34,9 @@ namespace VjezbanjeRazno.DAL
             }
         }
 
-        public List<Student> ListaSvihStudenata()
+        public List<Student> ListOfAllStudents()
         {
-            using (var db = new BazaPodataka())
+            using (var db = new WorkingDatabase())
             {
                 return db.Student.ToList();
 

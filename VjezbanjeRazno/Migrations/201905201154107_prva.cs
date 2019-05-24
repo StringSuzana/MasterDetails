@@ -1,4 +1,4 @@
-namespace VjezbanjeRazno.Migrations
+namespace MasterDetails.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

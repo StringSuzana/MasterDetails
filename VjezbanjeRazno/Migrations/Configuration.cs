@@ -1,18 +1,18 @@
-namespace VjezbanjeRazno.Migrations
+namespace MasterDetails.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<VjezbanjeRazno.Context.BazaPodataka>
+    internal sealed class Configuration : DbMigrationsConfiguration<MasterDetails.Context.WorkingDatabase>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(VjezbanjeRazno.Context.BazaPodataka context)
+        protected override void Seed(MasterDetails.Context.WorkingDatabase context)
         {
             //  This method will be called after migrating to the latest version.
 

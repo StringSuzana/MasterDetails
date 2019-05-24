@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace VjezbanjeRazno
+namespace MasterDetails
 {
     public class BundleConfig
     {

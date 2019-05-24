@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace VjezbanjeRazno.Models
+namespace MasterDetails.Models
 {
     public class SeminarStudentViewModel
     { 

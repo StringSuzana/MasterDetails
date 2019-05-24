@@ -132,10 +132,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Context\BazaPodataka.cs" />
+    <Compile Include="Context\WorkingDatabase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UpisiController.cs" />
-    <Compile Include="DAL\SveRepo.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="DAL\SeminarStudentRepo.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -143,10 +143,13 @@
     <Compile Include="Migrations\201905201154107_prva.Designer.cs">
       <DependentUpon>201905201154107_prva.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905241045351_engl.cs" />
+    <Compile Include="Migrations\201905241045351_engl.Designer.cs">
+      <DependentUpon>201905241045351_engl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Seminar.cs" />
     <Compile Include="Models\SeminarStudentViewModel.cs" />
-    <Compile Include="Models\SeminarViewModel.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -186,7 +189,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Upisi\IspisStudenata.cshtml" />
+    <Content Include="Views\Students\ListOfStudentsWithSeminars.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -207,6 +210,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905201154107_prva.resx">
       <DependentUpon>201905201154107_prva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905241045351_engl.resx">
+      <DependentUpon>201905241045351_engl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

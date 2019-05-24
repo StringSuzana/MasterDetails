@@ -7,13 +7,13 @@ namespace MasterDetails.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class prva : IMigrationMetadata
+    public sealed partial class engl : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(prva));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(engl));
         
         string IMigrationMetadata.Id
         {
-            get { return "201905201154107_prva"; }
+            get { return "201905241045351_engl"; }
         }
         
         string IMigrationMetadata.Source
